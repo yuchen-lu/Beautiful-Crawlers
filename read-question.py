@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Sep 27 23:08:45 2017
+
+@author: Yuchen
+"""
 
 """
 Spyder Editor
@@ -14,7 +20,6 @@ titles=list()
 
 url='https://www.zhihu.com/people/funkycastor/following/questions'
 
-soup = BeautifulSoup(sdata)
 
 
 
@@ -25,19 +30,20 @@ ctx.verify_mode = ssl.CERT_NONE
 
 html=urllib.request.urlopen(url,context=ctx).read()
 #print(html)
-yolo= BeautifulSoup(html,'html.parser')
+soup= BeautifulSoup(html,'html.parser')
+tags = soup('span')
+#print(tags)
+yo1=soup("span",{"class":"QuestionItem-title"})
+print(yo1)
+yo2=soup("div",{"class":"QuestionItem-title"})
+print(yo2)
 
-tag =soup.findall()
-tags1 = yolo('span')
-tags2 = yolo('div')
+#print(soup)
+#tags1= soup.findall('span',{'class':"QuestionItem-title"})
+#tags2 = soup.find_all('div',{'class':"QuestionItem-title"})
 
-for tag in tags1:
-        titles.append(tag.contents[0])
-        
+#print(tags1)
 
 
 
-
-print(titles)
-        
 
