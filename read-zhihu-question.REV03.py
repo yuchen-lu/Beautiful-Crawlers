@@ -23,7 +23,7 @@ url=str()
 pagenum=1 
 while(True):
     PageNumAdded=0
-    questionpage='https://www.zhihu.com/people/gao-xiang-24-90/following/questions?page='
+    questionpage='https://www.zhihu.com/people/funkycastor/following/questions?page='
     
     
        
